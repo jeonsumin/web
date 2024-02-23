@@ -1,0 +1,25 @@
+{
+  "name": "vue-portfolio",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "homepage": "https://jeonsumin.github.io/web",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "prebuild": "npm run build",
+    "deploy": "gh-pages -d build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "axios": "^1.6.7",
+    "dotenv": "^16.4.5",
+    "vue": "^3.4.15",
+    "vue-router": "^4.2.5"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.0.3",
+    "gh-pages": "^6.1.1",
+    "vite": "^5.0.11"
+  }
+}
