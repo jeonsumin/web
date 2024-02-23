@@ -8,7 +8,7 @@ export default defineConfig({
     plugins: [
         vue(),
     ],
-    base: "/web",
+    base: "/web/",
     server: {
         port: 3000,
         proxy: {

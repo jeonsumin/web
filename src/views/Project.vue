@@ -69,7 +69,6 @@ export default {
   created() {
     this.$axios.get(`/v1/pages${this.pageId}`).then(response => {
       let data = response.data.properties
-      console.log(response.data.properties);
       this.post.title = data.Title.title[0].plain_text
       this.post.description = data.Description.multi_select
       this.post.tech = data.Tags.multi_select
