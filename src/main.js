@@ -7,6 +7,7 @@ const app = createApp(App)
 
 import axios from 'axios'
 const http = axios.create({
+    baseURL:'https://api.notion.com',
     headers: {
         'Notion-Version': '2022-06-28',
         'Authorization': `Bearer ${import.meta.env.VITE_TOKEN}`
