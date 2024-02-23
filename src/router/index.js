@@ -4,12 +4,12 @@ import Project from "@/views/Project.vue"
 const routes = [
   {
     name: 'home',
-    path: '/',
+    path: '/web',
     component: () => import('@/views/Home.vue')
   },
   {
     path: '/:pathMatch(.*)*',
-    redirect: "/"
+    redirect: "/web"
   },
   {
     path: '/:id',
