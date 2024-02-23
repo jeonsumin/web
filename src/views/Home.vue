@@ -14,14 +14,6 @@
 </template>
 <script>
 import Post from "@/components/Post.vue";
-// onMounted(() => {
-//   this.$axios.post(`/v1/databases/${import.meta.env.VITE_DATABASES_ID}/query`).then(response => {
-//     this.posts = response.data.results.map(post => {
-//       return post
-//     })
-//   })
-  // console.log(import.meta.env.VITE_DATABASES_ID)
-// })
 
 export default {
   components: {Post},
@@ -29,15 +21,11 @@ export default {
     posts: {}
   }),
   created() {
-    try {
-      this.$axios.post(`/v1/databases/${import.meta.env.VITE_DATABASES_ID}/query`).then(response => {
-        this.posts = response.data.results.map(post => {
-          return post
-        })
+    this.$axios.post(`/v1/databases/${import.meta.env.VITE_DATABASES_ID}/query`).then(response => {
+      this.posts = response.data.results.map(post => {
+        return post
       })
-    } catch (e) {
-
-    }
+    })
   },
 }
 
