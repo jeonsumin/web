@@ -1,6 +1,6 @@
 <template>
   <div>
-    <router-link :to="item.id">
+    <router-link :to='getUrlPath'>
       <div class="img-wrapper">
         <img :src="item.cover.external.url" :alt="item.id"/>
       </div>
@@ -14,7 +14,11 @@ export default {
   props:{
     item: Object
   },
-  data: () => ({}),
-  methods: {},
+  computed:{
+    getUrlPath(){
+      return `/web/${this.item.id}`
+    }
+  }
+
 }
 </script>

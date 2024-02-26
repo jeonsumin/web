@@ -12,7 +12,7 @@ const routes = [
     redirect: "/web"
   },
   {
-    path: '/:id',
+    path: '/web/:id',
     component: Project
   }
 ]

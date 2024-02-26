@@ -44,7 +44,7 @@ export default {
       return this.post.url ? "바로가기" : ""
     },
     pageId() {
-      return this.$route.path
+      return this.$route.path.split("/")[2]
     },
     startDate() {
       if (!this.isEmptyObject(this.post.period))
@@ -67,7 +67,7 @@ export default {
     ,
   }),
   created() {
-    this.$axios.get(`/v1/pages${this.pageId}`).then(response => {
+    this.$axios.get(`/v1/pages/${this.pageId}`).then(response => {
       let data = response.data.properties
       this.post.title = data.Title.title[0].plain_text
       this.post.description = data.Description.multi_select

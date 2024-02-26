@@ -4,13 +4,14 @@
   "private": true,
   "type": "module",
   "homepage": "https://jeonsumin.github.io/web",
+  "proxy": "https://api.notion.com",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "deploy": "gh-pages -d build",
-    "preview": "vite preview"
+    "deploy": "git add -f ./dist && git commit -m 'commit' && git subtree push --prefix dist origin gh-pages"
   },
   "dependencies": {
+    "@notionhq/client": "^2.2.14",
     "axios": "^1.6.7",
     "dotenv": "^16.4.5",
     "vue": "^3.4.15",

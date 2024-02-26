@@ -8,12 +8,12 @@ export default defineConfig({
     plugins: [
         vue(),
     ],
-    base: "/web/",
     server: {
         port: 3000,
         proxy: {
             '/v1': {
                 target: 'https://api.notion.com',
+                rewrite: (path) => path.replace(/^\/v1/,''),
                 changeOrigin: true,
             }
         }
